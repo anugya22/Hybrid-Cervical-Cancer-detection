@@ -129,9 +129,7 @@ Builds trust and transparency in the model’s predictions.
 
 <img width="664" height="314" alt="image" src="https://github.com/user-attachments/assets/865dce62-7b27-4c43-9508-c95e055fc751" />
 <img width="694" height="264" alt="image" src="https://github.com/user-attachments/assets/951ae0dc-3924-49e6-a6ff-b9a3671df7ad" />
-
-
-
+<img width="1271" height="609" alt="Screenshot 2025-09-14 220337" src="https://github.com/user-attachments/assets/6eea103e-f58f-481d-b8cc-5824c81c5b9a" />
 
 
 📂 Repository Structure
