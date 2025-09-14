@@ -1,10 +1,11 @@
 # models.py
-# I implemented the image backbone (ResNet50 projection) and the tabular MLP exactly as in your notebook.
+# I implemented the image backbone using EfficientNetB0 and a tabular MLP exactly as I used in the notebook.
+
 from tensorflow.keras import layers, models
-from tensorflow.keras.applications import ResNet50
+from tensorflow.keras.applications import EfficientNetB0
 
 def build_image_model(input_shape=(224,224,3), projection_dim=512):
-    base = ResNet50(include_top=False, weights='imagenet', input_shape=input_shape, pooling='avg')
+    base = EfficientNetB0(include_top=False, weights='imagenet', input_shape=input_shape, pooling='avg')
     base.trainable = False
     inputs = base.input
     pooled = base.output
@@ -14,7 +15,7 @@ def build_image_model(input_shape=(224,224,3), projection_dim=512):
     return image_model
 
 class TabularNet(models.Model):
-    # I used the same MLP architecture and dropout/batchnorm settings from your notebook.
+    # I used a 2-layer MLP with BatchNorm and Dropout as in the notebook.
     def __init__(self, input_dim, hidden_dims=(128,64), out_dim=64):
         super(TabularNet, self).__init__()
         self.dense1 = layers.Dense(hidden_dims[0])
